@@ -1,0 +1,39 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'ASPurchase-swift' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  
+  pod 'Alamofire'
+  pod 'Moya/RxSwift'
+  pod 'SnapKit'
+  pod 'Kingfisher'
+  
+  pod 'RxDataSources'  # RxSwift中用于设置UITableView/UICollectionView data sources
+  
+  pod 'SwiftyJSON'
+  pod 'HandyJSON'
+  
+  pod 'RxSwift'
+  #pod 'RxCocoa'
+  
+  #pod 'realm'
+  pod 'XCGLogger'
+  pod 'Toast-Swift'
+  #pod 'ExSwift'
+  pod 'IQKeyboardManagerSwift'
+
+  pod 'SwiftyRSA'  # 加密
+  
+  
+  pod 'PromiseKit'
+  pod 'TensorFlowLiteSwift'
+  
+  
+  #pod 'ysocket'
+  #pod 'BlueSocket'
+  #pod 'ProtocolBuffers-Swift'
+  
+
+end
