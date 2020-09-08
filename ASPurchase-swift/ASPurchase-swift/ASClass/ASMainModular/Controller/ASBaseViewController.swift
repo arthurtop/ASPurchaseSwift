@@ -12,7 +12,7 @@ class ASBaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         
         navSetting()
         

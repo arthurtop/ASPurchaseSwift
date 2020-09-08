@@ -57,6 +57,11 @@
 		53761D6524C843E40029B9E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53761D6424C843E30029B9E4 /* Main.storyboard */; };
 		53761D6724C8497C0029B9E4 /* ASTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53761D6624C8497C0029B9E4 /* ASTabbar.swift */; };
 		5377361B24CACDB600BFACBC /* ASNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5377361A24CACDB600BFACBC /* ASNetwork.swift */; };
+		539477602506387B0022ABA8 /* ASFindFousVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5394775F2506387B0022ABA8 /* ASFindFousVM.swift */; };
+		539477622506395E0022ABA8 /* FindFousModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539477612506395E0022ABA8 /* FindFousModel.swift */; };
+		53947764250639A70022ABA8 /* BaseDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53947763250639A70022ABA8 /* BaseDataModel.swift */; };
+		5394776925075B0E0022ABA8 /* ASHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5394776825075B0E0022ABA8 /* ASHomeViewModel.swift */; };
+		5394776B25075F300022ABA8 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5394776A25075F300022ABA8 /* HomeModel.swift */; };
 		53AF4F6C24FF491900649B21 /* ASBussModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AF4F6B24FF491900649B21 /* ASBussModel.swift */; };
 		53AF4F6E24FF614300649B21 /* XLZNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AF4F6D24FF614300649B21 /* XLZNetworking.swift */; };
 		53AF4F722500D2FB00649B21 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AF4F712500D2FB00649B21 /* BaseResponse.swift */; };
@@ -122,6 +127,11 @@
 		53761D6424C843E30029B9E4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		53761D6624C8497C0029B9E4 /* ASTabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASTabbar.swift; sourceTree = "<group>"; };
 		5377361A24CACDB600BFACBC /* ASNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASNetwork.swift; sourceTree = "<group>"; };
+		5394775F2506387B0022ABA8 /* ASFindFousVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASFindFousVM.swift; sourceTree = "<group>"; };
+		539477612506395E0022ABA8 /* FindFousModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFousModel.swift; sourceTree = "<group>"; };
+		53947763250639A70022ABA8 /* BaseDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDataModel.swift; sourceTree = "<group>"; };
+		5394776825075B0E0022ABA8 /* ASHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASHomeViewModel.swift; sourceTree = "<group>"; };
+		5394776A25075F300022ABA8 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		53AF4F6B24FF491900649B21 /* ASBussModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASBussModel.swift; sourceTree = "<group>"; };
 		53AF4F6D24FF614300649B21 /* XLZNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XLZNetworking.swift; sourceTree = "<group>"; };
 		53AF4F712500D2FB00649B21 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
@@ -254,6 +264,7 @@
 		53761D1D24C830EB0029B9E4 /* ASCommonModular */ = {
 			isa = PBXGroup;
 			children = (
+				53947765250639BC0022ABA8 /* ProtocolBaseModel */,
 				53AF4F732500E24900649B21 /* NetworkTool */,
 				5377361C24CACDFC00BFACBC /* ASNetwork */,
 				536FAC5A24C97A5300C6CC7C /* CommonVM */,
@@ -353,6 +364,7 @@
 		53761D2824C830EB0029B9E4 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				5394776825075B0E0022ABA8 /* ASHomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -368,6 +380,7 @@
 		53761D2A24C830EB0029B9E4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5394776A25075F300022ABA8 /* HomeModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -564,6 +577,7 @@
 		53761D4124C830EB0029B9E4 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				5394775F2506387B0022ABA8 /* ASFindFousVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -579,6 +593,7 @@
 		53761D4324C830EB0029B9E4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				539477612506395E0022ABA8 /* FindFousModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -646,6 +661,14 @@
 				536FAC5B24C97A7100C6CC7C /* ASBaseMoyaAPI.swift */,
 			);
 			path = ASNetwork;
+			sourceTree = "<group>";
+		};
+		53947765250639BC0022ABA8 /* ProtocolBaseModel */ = {
+			isa = PBXGroup;
+			children = (
+				53947763250639A70022ABA8 /* BaseDataModel.swift */,
+			);
+			path = ProtocolBaseModel;
 			sourceTree = "<group>";
 		};
 		53AF4F732500E24900649B21 /* NetworkTool */ = {
@@ -799,6 +822,7 @@
 				53AF4F792500E24900649B21 /* APIUtil.swift in Sources */,
 				53761D5124C8363B0029B9E4 /* ColorFonts.swift in Sources */,
 				5357AC1624CC19BF0030E02D /* ASNetworking.swift in Sources */,
+				5394776925075B0E0022ABA8 /* ASHomeViewModel.swift in Sources */,
 				53761D5524C837380029B9E4 /* ASCommon.swift in Sources */,
 				53761D4D24C833020029B9E4 /* ASTabBarController.swift in Sources */,
 				53761D0924C82CA70029B9E4 /* AppDelegate.swift in Sources */,
@@ -826,10 +850,12 @@
 				53761D6724C8497C0029B9E4 /* ASTabbar.swift in Sources */,
 				53761D5324C836C10029B9E4 /* CommonExtension.swift in Sources */,
 				536FAC6524C991D200C6CC7C /* ASUserCenter.swift in Sources */,
+				53947764250639A70022ABA8 /* BaseDataModel.swift in Sources */,
 				53AF4F6E24FF614300649B21 /* XLZNetworking.swift in Sources */,
 				535A91F924EFA34200D75092 /* BussToolTableCell.swift in Sources */,
 				535A91F524EFA32F00D75092 /* BussOrderTableCell.swift in Sources */,
 				53AF4F782500E24900649B21 /* Router.swift in Sources */,
+				539477602506387B0022ABA8 /* ASFindFousVM.swift in Sources */,
 				53761D5924C8390C0029B9E4 /* ASMineViewController.swift in Sources */,
 				53AF4F6C24FF491900649B21 /* ASBussModel.swift in Sources */,
 				536FAC5C24C97A7100C6CC7C /* ASBaseMoyaAPI.swift in Sources */,
@@ -840,6 +866,8 @@
 				53761D4F24C833260029B9E4 /* ASNavigationController.swift in Sources */,
 				53761D6124C839510029B9E4 /* ASCartViewController.swift in Sources */,
 				5351F01624EBAADF006BC6EA /* LoginView.swift in Sources */,
+				539477622506395E0022ABA8 /* FindFousModel.swift in Sources */,
+				5394776B25075F300022ABA8 /* HomeModel.swift in Sources */,
 				53761D5724C838FD0029B9E4 /* ASHomeViewController.swift in Sources */,
 				53742A7024CAB7AE00D4E6EB /* ASDataTools.swift in Sources */,
 				53AF4F722500D2FB00649B21 /* BaseResponse.swift in Sources */,

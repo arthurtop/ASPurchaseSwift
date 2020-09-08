@@ -20,14 +20,26 @@ class ASHomeViewController: ASBaseViewController {
     
     fileprivate lazy var loginVM:ASLoginViewModel = ASLoginViewModel()
     
+    fileprivate var homeVM: ASHomeViewModel = ASHomeViewModel()
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
        
-        loginVM.LoginStatus()
+        loginVM.LoginStatus{
+            
+            self.homeVM.homeRequestData { (model) in
+                
+                print(model.message!,model.data)
+                
+            }
+            
+        }
         
+        
+
         
         
         
@@ -40,6 +52,8 @@ class ASHomeViewController: ASBaseViewController {
     
     
 }
+
+
 
 extension String{
     

@@ -21,12 +21,17 @@ class ASBussViewModel{
     
     lazy var baseModel: ASBussModel = ASBussModel()
     
+    // 生意界面数据请求
     func requestBussinessData(finishedCallback : @escaping () -> ()) {
 
-        ASAFNetwork.requestDatas(.get, urlString: "saleStatistic/home") { (response) in
+        ASAFNetwork<ASBussModel>.requestDatas(.get, urlString: "saleStatistic/home") { (response) in
             
-            self.baseModel = JSONDeserializer<ASBussModel>.deserializeFrom(json: response)!
-            print(response,self.baseModel)
+//            self.baseModel = JSONDeserializer<ASBussModel>.deserializeFrom(json: response)!
+//            print(response,self.baseModel)
+            
+            print(response)
+            
+            finishedCallback()
             
         }
     }

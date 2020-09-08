@@ -9,7 +9,8 @@
 import UIKit
 import Foundation
 import Alamofire
-import SwiftyJSON
+//import SwiftyJSON
+import HandyJSON
 
 
 typealias ASResponseSuccess = (_ response:String) -> Void
@@ -32,15 +33,15 @@ enum MethodTypes {
 }
 
 
-//class ASAFNetwork<T:Codable> {
-class ASAFNetwork {
+class ASAFNetwork<T: HandyJSON> {
+//class ASAFNetwork {
     
     class func requestDatas(_ type : MethodTypes,
                             urlString: String,
                             parameters: [String : Any]? = nil,
                             encoder: ParameterEncoder = URLEncodedFormParameterEncoder.default,
                             headers: HTTPHeaders? = nil,
-                            finishedCallback :  @escaping (_ result : String) -> ()) {
+                            finishedCallback :  @escaping (_ result : T) -> ()) {
         
         // 1.获取类型
         let method = type == .get ? HTTPMethod.get : HTTPMethod.post
@@ -65,8 +66,21 @@ class ASAFNetwork {
             .responseString { (response) in
                 
 //                print(response.value!)
-                finishedCallback(response.value!)
+//                finishedCallback(response.value!)
+                
+                
+                let model = JSONDeserializer<T>.deserializeFrom(json: response.value)!
+                
+                
+//                finishedCallback(response.value as! T)
+                
+                finishedCallback(model)
+                
+                
+                
         }
+        
+        
 //            .responseJSON { (response) in
 //
 //            // 3.获取结果

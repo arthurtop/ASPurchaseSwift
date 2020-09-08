@@ -35,7 +35,7 @@ class ASLoginViewModel: NSObject {
     "Accept":"application/json"]
     
     
-    func LoginStatus() {
+    func LoginStatus(finishCallback:@escaping () -> ()) {
         
         
         let parammms = UserLogin(invitationCode: "", mobile: "18611111111", verificationCode: "111222", zipCode: "+86")
@@ -59,6 +59,7 @@ class ASLoginViewModel: NSObject {
                 ASUserCenter.login(user)
                 
                 
+                finishCallback()
             }
             
         }.failed { (error) in

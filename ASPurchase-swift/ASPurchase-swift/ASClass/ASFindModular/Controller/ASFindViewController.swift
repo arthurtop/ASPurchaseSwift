@@ -9,22 +9,58 @@
 import UIKit
 
 class ASFindViewController: ASBaseViewController {
-
+    
+    fileprivate lazy var fousVM: ASFindFousVM = ASFindFousVM()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
+        loadFindFousData()
+        
+        
     }
     
 
-    /*
-    // MARK: - Navigation
+    
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+}
+
+
+extension ASFindViewController {
+    
+    func loadFindFousData() {
+        
+        /*
+        fousVM.findCommitList{
+            
+            
+        }
+        
+        fousVM.findFousNotesData {
+//            self.businessListView.baseModel = self.businessVM.baseModel
+            
+            
+        }
+         */
+        
+        
+//        fousVM.attentionList {
+//
+//        }
+        
+        fousVM.attentionRecommend {
+            
+            print(self.fousVM.recommendModel)
+            
+            
+            
+        }
+        
+        
+        
     }
-    */
-
+    
+    
 }

@@ -11,52 +11,18 @@ import HandyJSON
 import RxSwift
 
 
-/*
-{
- "code":0,
-  "data":{
-    "billStatistic":{
-         "delivered":0,
-         "haveAfter":0,
-         "noPurchase":0,
-         "toBeDelivered":3
-        },
-    "businessStatistic":{
-        "todayAmount":"0.00",
-        "todayOrderNum":0,
-        "todayUserNum":0,
-        "ytdAmount":"0.00",
-        "ytdOrderNum":0,
-        "ytdUserNum":0
-        },
-    "sellerOrderStatistic":{
-         "afterSale":0,
-         "cancelled":0,
-         "delivered":2,
-         "toBeDelivered":0,
-         "waitOrder":2
-        }
-    },
-    "message":"success",
-    "timestamp":1599120360870
- }
-*/
-
-/*"{\"code\":0,\"data\":{\"billStatistic\":{\"delivered\":0,\"haveAfter\":0,\"noPurchase\":0,\"toBeDelivered\":3},\"businessStatistic\":{\"todayAmount\":\"0.00\",\"todayOrderNum\":0,\"todayUserNum\":0,\"ytdAmount\":\"0.00\",\"ytdOrderNum\":0,\"ytdUserNum\":0},\"sellerOrderStatistic\":{\"afterSale\":0,\"cancelled\":0,\"delivered\":2,\"toBeDelivered\":0,\"waitOrder\":2}},\"message\":\"success\",\"timestamp\":1599457092869}"*/
 
 
-/*{"code":0,"data":{"billStatistic":{"delivered":0,"haveAfter":0,"noPurchase":0,"toBeDelivered":3},"businessStatistic":{"todayAmount":"0.00","todayOrderNum":0,"todayUserNum":0,"ytdAmount":"0.00","ytdOrderNum":0,"ytdUserNum":0},"sellerOrderStatistic":{"afterSale":0,"cancelled":0,"delivered":2,"toBeDelivered":0,"waitOrder":2}},"message":"success","timestamp":1599457845488}
- 
- ASBussModel(data: ASPurchase_swift.ASBussModel.ASBusData(billStatistic: ASPurchase_swift.ASBussModel.ASBusData.BillStatistic(delivered: 0, haveAfter: 0, noPurchase: 0, toBeDelivered: 0), businessStatistic: ASPurchase_swift.ASBussModel.ASBusData.BusinessStatistic(todayAmount: "0.00", todayOrderNum: 0, todayUserNum: 0, ytdAmount: "0.00", ytdOrderNum: 0, ytdUserNum: 0), sellerOrderStatistic: ASPurchase_swift.ASBussModel.ASBusData.SellerOrderStatistic(afterSale: 0, cancelled: 0, delivered: 2, toBeDelivered: 0, waitOrder: 2)), code: Optional(0), message: Optional("success"), timestamp: Optional(1599457845488.0))*/
 
-
-struct ASBussModel: HandyJSON {
+struct ASBussModel:HandyJSON, BaseDataModel {
     
-    var data = ASBusData()
     var code: Int?
+    
     var message: String?
+    
     var timestamp: Float64?
     
+    var data = ASBusData()
     
     struct ASBusData {
         
@@ -95,10 +61,7 @@ struct ASBussModel: HandyJSON {
             
         }
         
-        
     }
-    
-
 }
 
 extension ASBussModel {
@@ -111,6 +74,43 @@ extension ASBussModel {
 
 
 
+/*
+{
+ "code":0,
+  "data":{
+    "billStatistic":{
+         "delivered":0,
+         "haveAfter":0,
+         "noPurchase":0,
+         "toBeDelivered":3
+        },
+    "businessStatistic":{
+        "todayAmount":"0.00",
+        "todayOrderNum":0,
+        "todayUserNum":0,
+        "ytdAmount":"0.00",
+        "ytdOrderNum":0,
+        "ytdUserNum":0
+        },
+    "sellerOrderStatistic":{
+         "afterSale":0,
+         "cancelled":0,
+         "delivered":2,
+         "toBeDelivered":0,
+         "waitOrder":2
+        }
+    },
+    "message":"success",
+    "timestamp":1599120360870
+ }
+*/
+
+/*"{\"code\":0,\"data\":{\"billStatistic\":{\"delivered\":0,\"haveAfter\":0,\"noPurchase\":0,\"toBeDelivered\":3},\"businessStatistic\":{\"todayAmount\":\"0.00\",\"todayOrderNum\":0,\"todayUserNum\":0,\"ytdAmount\":\"0.00\",\"ytdOrderNum\":0,\"ytdUserNum\":0},\"sellerOrderStatistic\":{\"afterSale\":0,\"cancelled\":0,\"delivered\":2,\"toBeDelivered\":0,\"waitOrder\":2}},\"message\":\"success\",\"timestamp\":1599457092869}"*/
+
+
+/*{"code":0,"data":{"billStatistic":{"delivered":0,"haveAfter":0,"noPurchase":0,"toBeDelivered":3},"businessStatistic":{"todayAmount":"0.00","todayOrderNum":0,"todayUserNum":0,"ytdAmount":"0.00","ytdOrderNum":0,"ytdUserNum":0},"sellerOrderStatistic":{"afterSale":0,"cancelled":0,"delivered":2,"toBeDelivered":0,"waitOrder":2}},"message":"success","timestamp":1599457845488}
+ 
+ ASBussModel(data: ASPurchase_swift.ASBussModel.ASBusData(billStatistic: ASPurchase_swift.ASBussModel.ASBusData.BillStatistic(delivered: 0, haveAfter: 0, noPurchase: 0, toBeDelivered: 0), businessStatistic: ASPurchase_swift.ASBussModel.ASBusData.BusinessStatistic(todayAmount: "0.00", todayOrderNum: 0, todayUserNum: 0, ytdAmount: "0.00", ytdOrderNum: 0, ytdUserNum: 0), sellerOrderStatistic: ASPurchase_swift.ASBussModel.ASBusData.SellerOrderStatistic(afterSale: 0, cancelled: 0, delivered: 2, toBeDelivered: 0, waitOrder: 2)), code: Optional(0), message: Optional("success"), timestamp: Optional(1599457845488.0))*/
 
 
 
