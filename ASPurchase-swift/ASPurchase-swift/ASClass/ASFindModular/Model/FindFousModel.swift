@@ -10,10 +10,9 @@
 
 import UIKit
 import HandyJSON
-//import BaseDataModel
 
 
-struct FindFousModel: HandyJSON, BaseDataModel {
+struct FindFousModel: HandyJSON, BaseResponse {
     
     var code: Int?
     
@@ -23,11 +22,10 @@ struct FindFousModel: HandyJSON, BaseDataModel {
     
     
     
-    
-    
-    
 
 }
+
+
 
 /** 数据请求接口模型
     attention/list
@@ -35,7 +33,7 @@ struct FindFousModel: HandyJSON, BaseDataModel {
  **/
 
 
-struct AttentionList: HandyJSON, BaseDataModel {
+struct AttentionList: HandyJSON, BaseResponse {
     
     var code: Int?
     

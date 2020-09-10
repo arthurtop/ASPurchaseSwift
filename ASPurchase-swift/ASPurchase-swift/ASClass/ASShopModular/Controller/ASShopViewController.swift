@@ -12,7 +12,7 @@ class ASShopViewController: ASBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        title = "商铺"
         // Do any additional setup after loading the view.
     }
     

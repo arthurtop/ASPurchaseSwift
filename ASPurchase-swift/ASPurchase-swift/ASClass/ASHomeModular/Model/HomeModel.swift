@@ -11,7 +11,7 @@ import HandyJSON
 
 
 
-struct HomeModel: HandyJSON, BaseDataModel {
+struct HomeModel: HandyJSON, BaseResponse {
     
     var code: Int?
     

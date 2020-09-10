@@ -14,7 +14,7 @@ import RxSwift
 
 
 
-struct ASBussModel:HandyJSON, BaseDataModel {
+struct ASBussModel:HandyJSON, BaseResponse {
     
     var code: Int?
     

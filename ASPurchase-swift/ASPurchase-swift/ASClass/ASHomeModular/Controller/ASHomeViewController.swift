@@ -28,15 +28,20 @@ class ASHomeViewController: ASBaseViewController {
         super.viewDidLoad()
         
        
-        loginVM.LoginStatus{
-            
-            self.homeVM.homeRequestData { (model) in
-                
-                print(model.message!,model.data)
-                
-            }
-            
+//        loginVM.LoginStatus{
+//
+//        }
+        
+        title = "首页"
+        
+        self.homeVM.homeRequestData { (model) in
+
+            print(model.message!,model.data)
+
+
         }
+        
+        
         
         
 

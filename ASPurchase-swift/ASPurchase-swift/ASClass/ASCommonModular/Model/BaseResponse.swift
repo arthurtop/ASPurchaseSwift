@@ -10,6 +10,19 @@ import UIKit
 import HandyJSON
 
 
+public protocol BaseResponse {
+    
+    var code: Int? { get set }
+    var message: String? { get set }
+    var timestamp: Float64? { get set }
+    
+    
+    
+    
+}
+
+
+/*
 class BaseResponse<T: HandyJSON>: HandyJSON {
     
     var code: Int?   //服务器返回码
@@ -24,3 +37,4 @@ class BaseResponse<T: HandyJSON>: HandyJSON {
     public required init() {}
     
 }
+ */

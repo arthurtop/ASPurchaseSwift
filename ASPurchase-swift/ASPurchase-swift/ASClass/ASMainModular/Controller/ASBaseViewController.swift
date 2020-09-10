@@ -79,8 +79,6 @@ extension ASBaseViewController {
         // 全局设置title选中颜色
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor:k_333333], for: .selected)
         
-//        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor:k_9F9F9F], for: .normal)
-        
         
         return nav
     }

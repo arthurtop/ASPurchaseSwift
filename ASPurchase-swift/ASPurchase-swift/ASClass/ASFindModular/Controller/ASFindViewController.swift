@@ -50,6 +50,8 @@ extension ASFindViewController {
 //
 //        }
         
+        title = "发现"
+        
         fousVM.attentionRecommend {
             
             print(self.fousVM.recommendModel)

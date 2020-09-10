@@ -53,6 +53,7 @@ class ASLoginViewModel: NSObject {
         
         AS.POST(url: "/buyUser/V1.4.8/login", parameters: parammms, nil).success { (response) in
             let data = JSON(response)["data"].dictionaryValue
+            
             if let user = JSONDeserializer<UserModel>.deserializeFrom(dict: data){
                 DLog(user.userId)
                 

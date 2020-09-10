@@ -27,7 +27,8 @@ class ASUserCenter: NSObject {
     
     static let shared = ASUserCenter()
     
-    
+    /// 登录模块引用
+//    var loginVM:ASLoginViewModel = ASLoginViewModel()
     
     var user:UserModel?
     
@@ -88,11 +89,22 @@ class ASUserCenter: NSObject {
     }
     
     static func autoLogin() {
-        User = ASUserCenter.shared.user ?? UserModel()
+        
+//        let token:String = ASUserCenter.shared.user?.token ?? ""
+        
+//        User = ASUserCenter.shared.user ?? UserModel()
+        
         if (User.isLogin) {
             DLog("用户已登录！")
         } else {
             DLog("用户未登录！")
+//            login(User)
+            
+            let loginVM = ASLoginViewModel()
+            loginVM.LoginStatus {
+                DLog("用户自动登录!")
+            }
+            
         }
     }
     
@@ -202,31 +214,29 @@ class UserModel: NSObject ,NSCoding , HandyJSON{
         coder.encode(mainImg, forKey: "mainImg")
         coder.encode(headerImg, forKey: "headerImg")
         coder.encode(buyName, forKey: "buyName")
-        
-        
-        coder.encode(self.userId, forKey: "buySignature")
-        coder.encode(buyMobile, forKey: "token")
-        coder.encode(zipCode, forKey: "userSex")
-        coder.encode(mainImg, forKey: "levelId")
-        coder.encode(headerImg, forKey: "levelUrl")
-        coder.encode(buyName, forKey: "isFirst")
-        coder.encode(self.userId, forKey: "isFocus")
-        coder.encode(buyMobile, forKey: "shopFocus")
-        coder.encode(zipCode, forKey: "isSetPayPassword")
-        coder.encode(mainImg, forKey: "loginPassword")
-        coder.encode(headerImg, forKey: "accountBalance")
-        coder.encode(buyName, forKey: "iMId")
-        coder.encode(self.userId, forKey: "fansNum")
-        coder.encode(buyMobile, forKey: "focusNum")
-        coder.encode(zipCode, forKey: "agentNum")
-        coder.encode(mainImg, forKey: "notesSum")
-        coder.encode(headerImg, forKey: "monthNum")
-        coder.encode(buyName, forKey: "collectionNum")
-        coder.encode(buyMobile, forKey: "totalValue")
-        coder.encode(zipCode, forKey: "gmv")
-        coder.encode(mainImg, forKey: "gmvSum")
-        coder.encode(headerImg, forKey: "shopName")
-        coder.encode(buyName, forKey: "photo")
+        coder.encode(buySignature, forKey: "buySignature")
+        coder.encode(token, forKey: "token")
+        coder.encode(userSex, forKey: "userSex")
+        coder.encode(levelId, forKey: "levelId")
+        coder.encode(levelUrl, forKey: "levelUrl")
+        coder.encode(isFirst, forKey: "isFirst")
+        coder.encode(isFocus, forKey: "isFocus")
+        coder.encode(shopFocus, forKey: "shopFocus")
+        coder.encode(isSetPayPassword, forKey: "isSetPayPassword")
+        coder.encode(loginPassword, forKey: "loginPassword")
+        coder.encode(accountBalance, forKey: "accountBalance")
+        coder.encode(iMId, forKey: "iMId")
+        coder.encode(fansNum, forKey: "fansNum")
+        coder.encode(focusNum, forKey: "focusNum")
+        coder.encode(agentNum, forKey: "agentNum")
+        coder.encode(notesSum, forKey: "notesSum")
+        coder.encode(monthNum, forKey: "monthNum")
+        coder.encode(collectionNum, forKey: "collectionNum")
+        coder.encode(totalValue, forKey: "totalValue")
+        coder.encode(gmv, forKey: "gmv")
+        coder.encode(gmvSum, forKey: "gmvSum")
+        coder.encode(shopName, forKey: "shopName")
+        coder.encode(photo, forKey: "photo")
         
         
     }
@@ -241,38 +251,32 @@ class UserModel: NSObject ,NSCoding , HandyJSON{
         mainImg = coder.decodeString("mainImg")
         headerImg = coder.decodeString("headerImg")
         buyName = coder.decodeString("buyName")
-        
-        
         buySignature = coder.decodeString("buySignature")
-       token  = coder.decodeString("token")
-      userSex   = coder.decodeString("userSex")
-       levelId  = coder.decodeString( "levelId")
-       levelUrl  = coder.decodeString( "levelUrl")
-       isFirst =  coder.decodeString( "isFirst")
+        token  = coder.decodeString("token")
+        userSex   = coder.decodeString("userSex")
+        levelId  = coder.decodeString( "levelId")
+        levelUrl  = coder.decodeString( "levelUrl")
+        isFirst =  coder.decodeString( "isFirst")
         isFocus = coder.decodeString( "isFocus")
-       shopFocus  = coder.decodeString( "shopFocus")
+        shopFocus  = coder.decodeString( "shopFocus")
         isSetPayPassword = coder.decodeString( "isSetPayPassword")
-       loginPassword  = coder.decodeString("loginPassword")
-      accountBalance   = coder.decodeString( "accountBalance")
-      iMId   = coder.decodeString("iMId")
-      fansNum   = coder.decodeString("fansNum")
-       focusNum  = coder.decodeString("focusNum")
-       agentNum  = coder.decodeString( "agentNum")
-       notesSum  = coder.decodeString( "notesSum")
-       monthNum  = coder.decodeString( "monthNum")
-       collectionNum  = coder.decodeString( "collectionNum")
-      totalValue   = coder.decodeString( "totalValue")
-      gmv   = coder.decodeString( "gmv")
-       gmvSum =  coder.decodeString( "gmvSum")
-      shopName   = coder.decodeString( "shopName")
-       photo =  coder.decodeString( "photo")
-        
-        
-        
-        
-        
-        
+        loginPassword  = coder.decodeString("loginPassword")
+        accountBalance   = coder.decodeString( "accountBalance")
+        iMId   = coder.decodeString("iMId")
+        fansNum   = coder.decodeString("fansNum")
+        focusNum  = coder.decodeString("focusNum")
+        agentNum  = coder.decodeString( "agentNum")
+        notesSum  = coder.decodeString( "notesSum")
+        monthNum  = coder.decodeString( "monthNum")
+        collectionNum  = coder.decodeString( "collectionNum")
+        totalValue   = coder.decodeString( "totalValue")
+        gmv   = coder.decodeString( "gmv")
+        gmvSum =  coder.decodeString( "gmvSum")
+        shopName   = coder.decodeString( "shopName")
+        photo =  coder.decodeString( "photo")
+         
     }
+    
     
     func mapping(mapper: HelpingMapper) {
         mapper <<<

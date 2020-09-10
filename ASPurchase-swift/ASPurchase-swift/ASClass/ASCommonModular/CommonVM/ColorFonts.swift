@@ -75,6 +75,7 @@ let k_373737 = "#373737".color()
 let k_FF0000 = "#FF0000".color()
 
 let k_F8F8F8 = "#F8F8F8".color()
+let k_7F7F7F = "#7F7F7F".color()
 let k_2B2B2B = "#2B2B2B".color()
 let k_FF8735 = "#FF8735".color()
 let k_353535 = "#353535".color()

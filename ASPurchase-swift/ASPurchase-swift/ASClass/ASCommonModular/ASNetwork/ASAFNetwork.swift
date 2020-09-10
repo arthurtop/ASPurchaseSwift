@@ -34,8 +34,15 @@ enum MethodTypes {
 
 
 class ASAFNetwork<T: HandyJSON> {
-//class ASAFNetwork {
     
+    // 上传图片
+    class func uploadImages() {
+        
+        
+    }
+    
+    
+    // 请求网络数据
     class func requestDatas(_ type : MethodTypes,
                             urlString: String,
                             parameters: [String : Any]? = nil,
@@ -46,11 +53,11 @@ class ASAFNetwork<T: HandyJSON> {
         // 1.获取类型
         let method = type == .get ? HTTPMethod.get : HTTPMethod.post
         
-        let token:String = ASUserCenter.shared.user!.token
+        let token:String = ASUserCenter.shared.user?.token ?? ""
         
         var asHeaders: HTTPHeaders = [:]
         
-        if headers != nil {
+        if headers == nil {
             asHeaders = ["Content-type" : "application/json;charset=utf-8",
             "Accept":"application/json",
             "Authorization": token,
@@ -65,20 +72,13 @@ class ASAFNetwork<T: HandyJSON> {
         AF.request(baseUrl, method: method, parameters: parameters, headers: asHeaders)
             .responseString { (response) in
                 
-//                print(response.value!)
-//                finishedCallback(response.value!)
-                
-                
-                let model = JSONDeserializer<T>.deserializeFrom(json: response.value)!
-                
-                
-//                finishedCallback(response.value as! T)
-                
-                finishedCallback(model)
-                
-                
-                
+            let model = JSONDeserializer<T>.deserializeFrom(json: response.value)!
+            
+            finishedCallback(model)
+            
         }
+        
+        
         
         
 //            .responseJSON { (response) in
