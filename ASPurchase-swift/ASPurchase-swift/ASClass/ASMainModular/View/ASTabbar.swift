@@ -8,7 +8,7 @@
 
 import UIKit
 import Foundation
-
+import RxSwift
 
 
 
@@ -18,7 +18,7 @@ class ASTabbar: UITabBar {
     
     //
     var callBack:(() -> Void)?
-    
+    let dispose = DisposeBag()
     
     
     /***  按钮   ***/
@@ -37,7 +37,18 @@ class ASTabbar: UITabBar {
         btn.setImage(UIImage(named: "icon_tabbar_store_normal"), for: .normal)
         
         
-        btn.addTarget(self, action: #selector(shopMinddelBtn), for: UIControl.Event.touchUpInside)
+//        btn.addTarget(self, action: #selector(shopMinddelBtn), for: UIControl.Event.touchUpInside)
+        
+        
+        // RxSwift
+        btn.rx.tap.subscribe(onNext: { () in
+            
+            btn.isHighlighted = false
+            
+            self.callBack!()
+        }).disposed(by: dispose)
+        
+//        btn.rx.title().onNext("我的啊你怎么")
         
         return btn
     }()
@@ -51,15 +62,9 @@ class ASTabbar: UITabBar {
         
     }
     
-    /// 点击事件
+    
     @objc func shopMinddelBtn(sender: UIButton) {
-        
-        DLog("shopMinddelBtn 中间点击事件")
-        sender.isHighlighted = false
-        
-        callBack!()
-        
-        
+//        DLog("shopMinddelBtn 中间点击事件")
     }
     
     
@@ -91,7 +96,7 @@ class ASTabbar: UITabBar {
             
             let newPoint:CGPoint = convert(point, to: centerBtn)
             
-            if centerBtn .point(inside: newPoint, with: event) {
+            if centerBtn.point(inside: newPoint, with: event) {
                 return centerBtn
             }else{
                 return super.hitTest(point, with: event)

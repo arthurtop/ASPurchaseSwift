@@ -76,7 +76,9 @@ extension ASBusinessController {
     func loadBusinessData() {
         
         businessVM.requestBussinessData {
+            
             self.businessListView.baseModel = self.businessVM.baseModel
+            
             
         }
     }

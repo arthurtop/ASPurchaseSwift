@@ -11,6 +11,9 @@
 		534C9DFB24F39B7700E2E110 /* ASMineHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534C9DFA24F39B7700E2E110 /* ASMineHeaderView.swift */; };
 		534C9DFD24F39D0A00E2E110 /* ASMineHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 534C9DFC24F39D0A00E2E110 /* ASMineHeaderView.xib */; };
 		534C9DFF24F3C73A00E2E110 /* ASMineContenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534C9DFE24F3C73A00E2E110 /* ASMineContenView.swift */; };
+		53514A45250B77470091F06D /* BaseCtlProtocolEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53514A44250B77470091F06D /* BaseCtlProtocolEx.swift */; };
+		53514A48250B79AE0091F06D /* ProtocolEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53514A47250B79AE0091F06D /* ProtocolEx.swift */; };
+		53514A4A250B7A9E0091F06D /* KeychainSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53514A49250B7A9E0091F06D /* KeychainSwift.swift */; };
 		5351F01624EBAADF006BC6EA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5351F01524EBAADE006BC6EA /* LoginView.swift */; };
 		5351F01824EBABC2006BC6EA /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5351F01724EBABC2006BC6EA /* LoginView.xib */; };
 		53524FF024E14FFA009DDB96 /* ASLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53524FEF24E14FFA009DDB96 /* ASLoginViewModel.swift */; };
@@ -76,6 +79,9 @@
 		534C9DFC24F39D0A00E2E110 /* ASMineHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ASMineHeaderView.xib; sourceTree = "<group>"; };
 		534C9DFE24F3C73A00E2E110 /* ASMineContenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASMineContenView.swift; sourceTree = "<group>"; };
 		534FDFAB24E39F490066A485 /* ASPurchase-swift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ASPurchase-swift.entitlements"; sourceTree = "<group>"; };
+		53514A44250B77470091F06D /* BaseCtlProtocolEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCtlProtocolEx.swift; sourceTree = "<group>"; };
+		53514A47250B79AE0091F06D /* ProtocolEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolEx.swift; sourceTree = "<group>"; };
+		53514A49250B7A9E0091F06D /* KeychainSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainSwift.swift; sourceTree = "<group>"; };
 		5351F01524EBAADE006BC6EA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		5351F01724EBABC2006BC6EA /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
 		53524FEF24E14FFA009DDB96 /* ASLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASLoginViewModel.swift; sourceTree = "<group>"; };
@@ -161,6 +167,15 @@
 				534C653B24F3901D00832C0D /* UIBarButtonItem-Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		53514A46250B79750091F06D /* ProtocolsEx */ = {
+			isa = PBXGroup;
+			children = (
+				53514A47250B79AE0091F06D /* ProtocolEx.swift */,
+				53514A49250B7A9E0091F06D /* KeychainSwift.swift */,
+			);
+			path = ProtocolsEx;
 			sourceTree = "<group>";
 		};
 		5351F01424EBAAC1006BC6EA /* Views */ = {
@@ -258,6 +273,7 @@
 		53761D1D24C830EB0029B9E4 /* ASCommonModular */ = {
 			isa = PBXGroup;
 			children = (
+				53514A46250B79750091F06D /* ProtocolsEx */,
 				53AF4F732500E24900649B21 /* NetworkTool */,
 				5377361C24CACDFC00BFACBC /* ASNetwork */,
 				536FAC5A24C97A5300C6CC7C /* CommonVM */,
@@ -280,6 +296,7 @@
 		53761D1F24C830EB0029B9E4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				53514A44250B77470091F06D /* BaseCtlProtocolEx.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -811,6 +828,7 @@
 				53761D0924C82CA70029B9E4 /* AppDelegate.swift in Sources */,
 				53761D5B24C839260029B9E4 /* ASBusinessController.swift in Sources */,
 				534C653C24F3901D00832C0D /* UIBarButtonItem-Extension.swift in Sources */,
+				53514A45250B77470091F06D /* BaseCtlProtocolEx.swift in Sources */,
 				536FAC6324C9906E00C6CC7C /* ASConfig.swift in Sources */,
 				536FAC6124C98E8200C6CC7C /* RegistViewController.swift in Sources */,
 				535A91F124EFA31800D75092 /* BussSmallTableCell.swift in Sources */,
@@ -820,6 +838,7 @@
 				53524FF024E14FFA009DDB96 /* ASLoginViewModel.swift in Sources */,
 				536FAC5324C9581100C6CC7C /* ASBusContentView.swift in Sources */,
 				535A91ED24EFA2F400D75092 /* BussShopTableCell.swift in Sources */,
+				53514A4A250B7A9E0091F06D /* KeychainSwift.swift in Sources */,
 				53761D0B24C82CA70029B9E4 /* SceneDelegate.swift in Sources */,
 				534C9DFF24F3C73A00E2E110 /* ASMineContenView.swift in Sources */,
 				536FAC5724C9637000C6CC7C /* ASBussViewModel.swift in Sources */,
@@ -835,6 +854,7 @@
 				535A91F924EFA34200D75092 /* BussToolTableCell.swift in Sources */,
 				535A91F524EFA32F00D75092 /* BussOrderTableCell.swift in Sources */,
 				53AF4F782500E24900649B21 /* Router.swift in Sources */,
+				53514A48250B79AE0091F06D /* ProtocolEx.swift in Sources */,
 				539477602506387B0022ABA8 /* ASFindFousVM.swift in Sources */,
 				53761D5924C8390C0029B9E4 /* ASMineViewController.swift in Sources */,
 				53AF4F6C24FF491900649B21 /* ASBussModel.swift in Sources */,
